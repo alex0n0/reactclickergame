@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 
 
-import batman from './res/batman.png';
-import background from './res/background.jpg';
-import logo from './res/logo.png';
+// import batman from './res/batman.png';
+// import background from './res/background.jpg';
+// import logo from './res/logo.png';
 
 
 import arrVillains from './utils/villains';
@@ -80,7 +80,8 @@ class App extends React.Component {
           <nav className="sectionNav container-fluid py-1">
             <a href="/">
               <img
-                src={logo}
+                src="/logo.png"
+                // src={logo}
                 width="auto"
                 height="100%"
                 style={{ filter: 'brightness(0) invert(1)' }}
@@ -98,18 +99,21 @@ class App extends React.Component {
         <main className="pt-3">
           <img
             className="position-fixed"
-            src={batman}
+            src="/batman.png"
+            // src={batman}
             alt="Canvas Logo"
             width="50%"
             height="auto"
             style={{ filter: "drop-shadow(-20px 20px 10px rgba(255, 255, 255, 0.1))", zIndex: '-1', bottom: '0px', right: '-50px' }}
           />
 
-          <div className="background" style={{ backgroundImage: 'url(' + background + ')' }}></div>
+          <div className="background" style={{ backgroundImage: 'url(/background.jpg)' }}></div>
+          {/* <div className="background" style={{ backgroundImage: 'url(' + background + ')' }}></div> */}
           <div className="container-fluid">
             <div className="row">
               <div className="col-12">
-                <div className="rounded p-5" style={{ background: 'url("https://images2.minutemediacdn.com/image/upload/c_crop,h_1125,w_2000,x_0,y_59/f_auto,q_auto,w_1100/v1554742075/shape/mentalfloss/559268-dccomicshed.jpg"), rgba(0, 0, 0, 1)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundBlendMode: 'screen' }}>
+                <div className="rounded p-5" style={{ background: 'url("/instructionsimage.jpg"), rgba(0, 0, 0, 1)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundBlendMode: 'screen' }}>
+                {/* <div className="rounded p-5" style={{ background: 'url("https://images2.minutemediacdn.com/image/upload/c_crop,h_1125,w_2000,x_0,y_59/f_auto,q_auto,w_1100/v1554742075/shape/mentalfloss/559268-dccomicshed.jpg"), rgba(0, 0, 0, 1)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundBlendMode: 'screen' }}> */}
                   <h3 className="m-0 p-2 rounded text-white text-center   " style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>Capture each villain but <b><u>NO MORE THAN ONCE</u></b></h3>
                 </div>
               </div>
@@ -150,65 +154,6 @@ class App extends React.Component {
           </ul>
         </footer>
       </>
-
-
-      // <div style={{ minHeight: '200vh' }}>
-
-      //   <div className="position-fixed" style={{ backgroundImage: 'url(' + background + ')', backgroundSize: 'cover', filter: 'opacity(50%)', top: '0px', left: '0px', height: '100vh', width: '100vw', zIndex: '-2' }}></div>
-      //   <div className="position-fixed" style={{ maxWidth: '50vw', minWidth: '400px', bottom: '0px', right: '0px' }}>
-      //     <img
-      //       src={batman}
-      //       alt="Canvas Logo"
-      //       width="100%"
-      //       height="auto"
-      //       style={{ filter: "drop-shadow(-20px 20px 10px rgba(255, 255, 255, 0.1))" }}
-      //     />
-      //   </div>
-
-
-      //   <header>
-      //     <nav style={{ backgroundImage: 'linear-gradient(rgba(100, 100, 100, 1) 10%, rgba(30, 30, 30, 1) 80%, rgba(25, 25, 25, 1) 10%)', height: '60px' }}>
-      //       <img
-      //         src={logo}
-      //         width="auto"
-      //         height="100%"
-      //         style={{ filter: 'brightness(0) invert(1)' }}
-      //         alt="logo link"
-      //       >
-      //       </img>
-      //     </nav>
-      //     <div className="bg-secondary d-flex py-2 px-3">
-      //       <p className="m-0 text-light">HIGHSCORE: 88 points | SCORE: 10 points</p>
-      //     </div>
-      //   </header>
-
-
-      //   <main>
-      //     <div className="container-fluid">
-      //       <div className="row">
-
-
-
-      //         <div className="col-12 col-md-7 border border-danger">
-      //           <div className="row p-2">
-      //             {this.state.shuffledArr.map(curr => {
-      //               return (
-      //                 <div className="col-6 col-md-4 col-lg-3 p-2" key={curr.id}>
-      //                   <ImageTile onClick={(id) => { this.handleImageTileClick(id) }} villain={curr}/>
-      //                 </div>
-      //               )
-      //             })}
-      //           </div>
-      //         </div>
-
-
-      //       </div>
-      //     </div>
-      //   </main>
-
-
-      //   <footer>asdf</footer>
-      // </div>
     );
   }
 }

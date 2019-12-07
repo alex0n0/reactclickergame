@@ -35,7 +35,6 @@ class ImageTile extends React.Component {
                     </button>
                 </div>
                 <div className={this.state.hover ? "details open" : "details"}>
-                    {/* <div className={"details open"}> */}
                     <h4 className="text-white m-0 detailName text-truncate">{this.props.villain.name}</h4>
                     <p className="m-0 detailRating text-truncate">Danger Lv. <b className="text-white">{this.props.villain.dangerLv}</b></p>
                 </div>
@@ -44,5 +43,4 @@ class ImageTile extends React.Component {
     }
 }
 
-// module.exports = ImageTile; // this doesnt work
 export default ImageTile;
