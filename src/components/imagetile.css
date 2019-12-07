@@ -1,0 +1,118 @@
+.item {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.item>.image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+    /* clip-path: polygon(95% 0, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%, 5% 0%); */
+    border-radius: 8px;
+}
+.item>.image>img {
+    width: 100%;
+    height: auto;
+}
+
+.item>.image>button {
+    position: absolute;
+    color: black;
+    left: -50px;
+    z-index: 40px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    border: none;
+    height: 45px;
+    width: 45px;
+    border-radius: 10000px;
+    transition: 0.3s all;
+}
+
+.item>.image>button:hover {
+    transform: scale(1.075);
+}
+
+.item>.image>button:focus {
+    outline: none;
+}
+
+.item>.image >button.eye {
+    top: 10px;
+}
+.item>.image >button.add {
+    top: 60px;
+    border: 3px solid black;
+    background-color: #fde311;
+}
+
+
+
+
+
+
+.item>.details {
+    position: absolute;
+    /* top: 5px;
+    left: 0;
+    transform: translate(0px, 0px); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: 80%;
+    overflow: hidden;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: black;
+    z-index: 1;
+    border-radius: 10px;
+    transition: 0.1s all;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+.item:hover {
+    z-index: 20;
+}
+
+.item:hover>.image>button {
+    left: 10px;
+}
+
+.item:hover>.details {
+    top: -5px;
+    left: -5px;
+    transform: translate(0px, 0px);
+    height: calc(100% + 10px);
+    width: calc(100% + 10px);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.8);
+}
+
+.item:hover>.details.open {
+    width: calc(100% + 10px);
+    height: calc(100% + 95px);
+}
+
+.detailName {
+    letter-spacing: 1.5px;
+    word-spacing: 4px;
+}
+
+.detailRating {
+    font-family: 'arial';
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}

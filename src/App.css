@@ -1,4 +1,108 @@
-.App {
+header {
+  height: 85px;
+  min-width: var(--minwidth);
+
+}
+
+header>.sectionNav {
+  height: 50px;
+  width: 100%;
+  background: linear-gradient(rgba(100, 100, 100, 1) 10%, rgba(30, 30, 30, 1) 80%, rgba(25, 25, 25, 1) 10%);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+
+}
+
+header>.sectionScore {
+  min-width: var(--minwidth);
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  word-wrap: none;
+  background-color: grey;
+  background: linear-gradient(rgba(200, 200, 200, 1) 10%, rgba(150, 150, 150, 1) 80%, rgba(145, 145, 145, 1) 10%);
+  position: fixed;
+  width: 100%;
+  top: 50px;
+  left: 0px;
+  z-index: 9999;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9);
+  letter-spacing: 1px;
+}
+
+main {
+  min-height: calc(100vh - 85px);
+  min-width: var(--minwidth);
+  padding-bottom: 100px;
+}
+
+main>.background {
+  height: calc(100vh - 85px);
+  width: 100%;
+  position: fixed;
+  top: 85px;
+  left: 0px;
+  background-size: 'cover'; 
+  filter: opacity(50%);
+  z-index: -2;
+}
+
+footer {
+  min-height: 400px;
+  background-color: black;
+  min-width: var(--minwidth);
+  color: white;
+}
+
+
+
+
+.textInstructions {
+  letter-spacing: 1.5px;
+  word-spacing: 2px;
+}
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+
+
+
+
+
+/* .background {
+  background: url('./res/batman.png');
+  width: 100%;
+  height: auto;
+} */
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +139,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
