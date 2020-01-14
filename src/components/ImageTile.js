@@ -1,6 +1,5 @@
 import React from 'react';
 import './imagetile.css';
-import batmansymbol from '../res/batman-blk.png';
 
 class ImageTile extends React.Component {
     constructor(props) {
@@ -31,7 +30,7 @@ class ImageTile extends React.Component {
                         className="material-icons p-0 m-0">visibility</i></button>
                     <button onClick={() => { this.props.onClick(this.props.villain.id) }} className="d-flex align-items-center justify-content-center text-dark add">
                         <img
-                            src={batmansymbol} width="100%" height="auto" alt="" />
+                            src="/batman-blk.png" width="100%" height="auto" alt="" />
                     </button>
                 </div>
                 <div className={this.state.hover ? "details open" : "details"}>
