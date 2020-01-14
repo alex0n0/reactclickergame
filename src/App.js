@@ -107,12 +107,12 @@ class App extends React.Component {
             style={{ filter: "drop-shadow(-20px 20px 10px rgba(255, 255, 255, 0.1))", zIndex: '-1', bottom: '0px', right: '-50px' }}
           />
 
-          <div className="background" style={{ backgroundImage: 'url(/background.jpg)' }}></div>
+          {/* <div className="background" style={{ backgroundImage: 'url(/background.jpg)' }}></div> */}
           {/* <div className="background" style={{ backgroundImage: 'url(' + background + ')' }}></div> */}
           <div className="container-fluid">
             <div className="row">
               <div className="col-12">
-                <div className="rounded p-5" style={{ background: 'url("/instructionsimage.jpg"), rgba(0, 0, 0, 1)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundBlendMode: 'screen' }}>
+                {/* <div className="rounded p-5" style={{ background: 'url("/instructionsimage.jpg"), rgba(0, 0, 0, 1)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundBlendMode: 'screen' }}> */}
                 {/* <div className="rounded p-5" style={{ background: 'url("https://images2.minutemediacdn.com/image/upload/c_crop,h_1125,w_2000,x_0,y_59/f_auto,q_auto,w_1100/v1554742075/shape/mentalfloss/559268-dccomicshed.jpg"), rgba(0, 0, 0, 1)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundBlendMode: 'screen' }}> */}
                   <h3 className="m-0 p-2 rounded text-white text-center   " style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>Capture each villain but <b><u>NO MORE THAN ONCE</u></b></h3>
                 </div>

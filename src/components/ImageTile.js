@@ -30,8 +30,8 @@ class ImageTile extends React.Component {
                     <button onMouseEnter={this.handleMouseEnterDetails} onMouseLeave={this.handleMouseLeaveDetails} className="d-flex align-items-center justify-content-center text-dark eye"><i
                         className="material-icons p-0 m-0">visibility</i></button>
                     <button onClick={() => { this.props.onClick(this.props.villain.id) }} className="d-flex align-items-center justify-content-center text-dark add">
-                        <img
-                            src={batmansymbol} width="100%" height="auto" alt="" />
+                        {/* <img
+                            src={batmansymbol} width="100%" height="auto" alt="" /> */}
                     </button>
                 </div>
                 <div className={this.state.hover ? "details open" : "details"}>
