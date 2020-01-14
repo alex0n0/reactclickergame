@@ -2,11 +2,6 @@ import React from 'react';
 import './App.css';
 
 
-// import batman from './res/batman.png';
-// import background from './res/background.jpg';
-import logo from './res/logo.png';
-
-
 import arrVillains from './utils/villains';
 import ImageTile from './components/ImageTile';
 
@@ -27,6 +22,8 @@ class App extends React.Component {
   componentDidMount() {
     this.restart();
   }
+
+  timeout;
 
   restart(loss = false) {
     var shuffledArr = this.shuffleArray(this.state.arrImageTiles);
@@ -119,7 +116,7 @@ class App extends React.Component {
               </div>
             </div>
             <div className="row px-3 pt-3">
-              <div className={this.state.loss ? "col-12 col-md-7 rounded shake animated infinite" : "col-12 col-md-7 rounded shake"} style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
+              <div className={this.state.loss ? "col-12 col-md-7 rounded shake animated infinite" : "col-12 col-md-7 rounded"} style={{ backgroundColor: 'rgba(255, 255, 255, 0.2)' }}>
                 <div className="row p-2">
                   {this.state.arrImageTiles.map(curr => {
                     return (
@@ -137,7 +134,7 @@ class App extends React.Component {
 
 
         <footer className="py-3">
-          <ul className="m-0">
+          <ul className="m-0" style={{color: "black"}}>
             <li>https://batman.fandom.com/wiki/Jason_Todd</li>
             <li>https://batman.fandom.com/wiki/The_Joker</li>
             <li>https://batman.fandom.com/wiki/The_Riddler</li>
