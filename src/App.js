@@ -34,6 +34,16 @@ class App extends React.Component {
       arrFound: [],
       loss: loss
     });
+    this.timeout = setTimeout(() => {
+      this.setState({
+        ...this.state,
+        loss: false
+      });
+      if (this.timeout) {
+        clearTimeout(this.timeout);
+        this.timeout = undefined;
+      }
+    }, 500);
   }
 
   shuffleArray(arr) {
@@ -53,10 +63,14 @@ class App extends React.Component {
 
   handleImageTileClick(id) {
     var arrTempFound = [...this.state.arrFound];
-    var found = arrTempFound.indexOf(id) === -1 ? false : true;
-    if (found) {
+    var alreadyFound = arrTempFound.indexOf(id) === -1 ? false : true;
+    if (alreadyFound) {
       this.restart(true);
     } else {
+      if (this.timeout) {
+        clearTimeout(this.timeout);
+        this.timeout = undefined;
+      }
       arrTempFound.push(id);
       var shuffledArr = this.shuffleArray(this.state.arrImageTiles);
       this.setState({
@@ -77,7 +91,6 @@ class App extends React.Component {
           <nav className="sectionNav container-fluid py-1">
             <a href="/">
               <img
-                // src="/logo.png"
                 src='/logoDC.png'
                 width="auto"
                 height="100%"
@@ -97,7 +110,6 @@ class App extends React.Component {
           <img
             className="position-fixed"
             src="/batman.png"
-            // src={batman}
             alt="Canvas Logo"
             width="50%"
             height="auto"
@@ -105,12 +117,10 @@ class App extends React.Component {
           />
 
           <div className="background" style={{ backgroundImage: 'url(/background.jpg)' }}></div>
-          {/* <div className="background" style={{ backgroundImage: 'url(' + background + ')' }}></div> */}
           <div className="container-fluid">
             <div className="row">
               <div className="col-12">
                 <div className="rounded p-5" style={{ background: 'url("/instructionsimage.jpg"), rgba(0, 0, 0, 1)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundBlendMode: 'screen' }}>
-                {/* <div className="rounded p-5" style={{ background: 'url("https://images2.minutemediacdn.com/image/upload/c_crop,h_1125,w_2000,x_0,y_59/f_auto,q_auto,w_1100/v1554742075/shape/mentalfloss/559268-dccomicshed.jpg"), rgba(0, 0, 0, 1)', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundBlendMode: 'screen' }}> */}
                   <h3 className="m-0 p-2 rounded text-white text-center   " style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)' }}>Capture each villain but <b><u>NO MORE THAN ONCE</u></b></h3>
                 </div>
               </div>
