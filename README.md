@@ -23,10 +23,26 @@ npm install
 npm startreactapp
 ```
 
+## Deployment
+
+An express server is included to serve the built project for deployment. To run it locally, build the React application and then start the server:
+
+```terminal
+npm run build
+npm run start
+```
+
+To view the application in the browser:
+
+```terminal
+http://localhost:5000
+```
+
 ## Built With
 
 - React.js
 - Animate.css
+- Express
 
 ## License
 
