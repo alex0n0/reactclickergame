@@ -30,4 +30,4 @@ npm startreactapp
 
 ## License
 
-This project is licensed under the MIT license. See details [here](https://github.com/alex0n0/reactclickergame/blob/master/LICENSE).
+This project is MIT licensed. See details [here](https://github.com/alex0n0/reactclickergame/blob/master/LICENSE).
