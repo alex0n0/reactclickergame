@@ -14,7 +14,7 @@ App is a Batman themed memory game requiring you to click on each option only on
 
 ## Getting Started
 
-Begin by cloning the [reactclickergame](https://github.com/alex0n0/reactclickergame) repository, install dependencies and start the react app:
+Begin by cloning the [reactclickergame](https://github.com/alex0n0/reactclickergame) repository, install dependencies and start the React app:
 
 ```terminal
 git clone https://github.com/alex0n0/reactclickergame.git
