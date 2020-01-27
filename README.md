@@ -4,6 +4,8 @@ App is a Batman themed memory game requiring you to click on each option only on
 
 [Click here](https://beanstalk88.herokuapp.com/) for an interactive demo.
 
+![screenshot 1](/public/screenshot1.png)
+
 ## Features
 
 - Single page
@@ -21,6 +23,30 @@ git clone https://github.com/alex0n0/reactclickergame.git
 cd reactclickergame
 npm install
 npm startreactapp
+```
+
+## Folder Structure
+
+```text
+reactclickergame/
+├── public/
+│   ├── background.jpg <- application background
+│   ├── batman-blk.jpg <- clicker button emblem
+│   ├── batman.png <- image above background
+│   ├── index.html <- index file with bootstrap.min.css link
+│   ├── instructionsimage.jpg <- instructions panel background
+│   └── logoDC.png <- home link logo
+├── src/
+│   ├── components/
+│   │   ├── imagetile.css
+│   │   └── imageTile.js <- image tile component
+│   ├── utils/
+│   │   └── villains.js <- array of villain details
+│   ├── App.css <- styling for app
+│   └── App.js <- body of application
+├── package-lock.json
+├── package.json
+└── server.js
 ```
 
 ## Deployment
